@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<title>HI TECH ONLINE CLASS – Python Bootcamp</title>
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- Base + Jellyfish theme ---------- */
+*{box-sizing:border-box;margin:0}
+body{
+  font-family:'Poppins',sans-serif;
+  line-height:1.7;
+  color:#e8f1ff;
+  background:radial-gradient(ellipse at bottom,#051937 0%,#00111e 100%);
+}
+header{
+  text-align:center;padding:50px 15px;position:relative;overflow:hidden
+}
+header h1{
+  margin:0;font-size:2.5rem;letter-spacing:1px;
+  font-family:'JetBrains Mono',monospace;
+  text-shadow:0 0 12px #00c9ff
+}
+/* floating bubbles */
+header::before,header::after{
+  content:"";position:absolute;width:120%;height:120%;
+  background:radial-gradient(circle,#00c9ff55 20%,transparent 70%);
+  top:-10%;left:-10%;border-radius:50%;animation:float 18s linear infinite
+}
+header::after{animation-duration:25s;animation-direction:reverse}
+@keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+
+#gate,#content{
+  max-width:900px;margin:40px auto;padding:30px;
+  border-radius:14px;border:1px solid rgba(255,255,255,.2);
+  backdrop-filter:blur(14px);background:rgba(255,255,255,.08)
+}
+h2,h3{color:#7ad7ff;margin-top:0}
+
+input,button{
+  width:100%;padding:14px;margin-top:14px;border-radius:8px;
+  font-size:1rem;border:none
+}
+input{background:rgba(255,255,255,.15);color:#e8f1ff}
+button{
+  background:#00c9ff;color:#fff;cursor:pointer;
+  box-shadow:0 0 12px #00c9ffaa;transition:.2s
+}
+button:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 0 18px #00c9ff}
+#content{display:none}
+
+.pill{
+  background:#00c9ff22;color:#7ad7ff;
+  border:1px solid #00c9ff66;padding:4px 12px;border-radius:20px;
+  font-size:.8rem;margin-right:8px
+}
+a{color:#7ad7ff}
+footer{text-align:center;font-size:.9rem;color:#7ad7ff;padding:45px 0}
+
+@media(max-width:700px){.two-col{grid-template-columns:1fr}}
+
+/* ---------- Enroll button style ---------- */
+.enroll-btn{
+  width:auto;display:inline-block;margin-top:28px;padding:14px 32px;
+  background:linear-gradient(90deg,#00c9ff 0%,#9a40ff 100%);
+  border:none;border-radius:50px;font-size:1.05rem;font-weight:600;
+  color:#fff;text-align:center;cursor:pointer;
+  box-shadow:0 0 18px #00c9ffaa;transition:.25s
+}
+.enroll-btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 0 25px #9a40ff}
+</style>
+</head>
+<body>
+
+<header><h1>HI TECH ONLINE CLASS</h1></header>
+
+<!-- -------- Gate (registration form) -------- -->
+<div id="gate">
+  <h2>📝 Register to Unlock Details</h2>
+  <p>Fill in your information to view the full course outline &amp; bonuses.</p>
+  <form id="gateForm">
+    <input id="gName"  type="text"  placeholder="Your name"  required>
+    <input id="gEmail" type="email" placeholder="Your email" required>
+    <input id="gPhone" type="tel"   placeholder="Your phone" required>
+    <button type="submit">Unlock Now</button>
+  </form>
+</div>
+
+<!-- -------- Hidden content (visible after form) -------- -->
+<div id="content">
+  <h2>30 Days of Python – Beginner ➜ Advanced</h2>
+  <p><strong>Dates:</strong> Starts 02nd June 2025<br>
+     <strong>Schedule:</strong> Mon-Fri, 7 : 30 pm – 8 : 30 pm IST<br>
+     <strong>Mode:</strong> Google Meet (recordings lifetime-access)</p>
+
+  <p><strong>Pricing:</strong>
+     <span class="pill">₹ 499 (first 10 seats)</span>
+     <span class="pill">₹ 699 (after)</span></p>
+
+  <p style="font-style:italic">
+    🚀 <b>Fast-Track Offer:</b> Complete all weekly tasks → win a private 1-on-1 career session!
+  </p>
+
+  <!-- ---------- Trainer Details ---------- -->
+  <h3>Trainer – Mr. Muthusaravanan (MCA)</h3>
+  <ul>
+    <li><strong>Role:</strong> Senior Python Developer, Iness Global Solutions, Bangalore</li>
+    <li><strong>Experience:</strong> 5+ years (backend, automation, API development)</li>
+    <li><strong>Key Skills:</strong> Python 3, FastAPI, Django, PostgreSQL, Docker, CI/CD</li>
+    <li><strong>Teaching Style:</strong> Code-along demos, live debugging, industry stories</li>
+  </ul>
+
+  <!-- ---------- Syllabus ---------- -->
+  <h3>Syllabus Overview</h3>
+  <ol>
+    <li>Python Basics – numbers, text, decisions, loops</li>
+    <li>Functions &amp; Modules – write once, reuse anywhere</li>
+    <li>OOP Made Easy – organise code like real-world objects</li>
+    <li>Every-day Automation – Excel, files, web forms</li>
+    <li>APIs &amp; FastAPI – get data, build a small service</li>
+    <li>Capstone Project – plan, code, deploy a REST app</li>
+  </ol>
+
+  <!-- ---------- Enroll Now button ---------- -->
+  <button class="enroll-btn"
+          onclick="window.open('https://forms.gle/utjmiEasT27KAS4z9','_blank')">
+    Enroll Now
+  </button>
+
+  <h3 style="margin-top:40px">Need help?</h3>
+  <p>📞 Hadhi Noor Mohamed H – 96295 23100<br>
+     📷 Instagram: <a href="https://instagram.com/hi_tech__official" target="_blank">@hi_tech__official</a></p>
+
+  <!-- Admin area: hidden until pass-phrase -->
+  <div id="adminArea" style="display:none;margin-top:45px">
+      <h3>📋 Registrations (private)</h3>
+      <ol id="privateList"></ol>
+      <button onclick="downloadCSV()">Download CSV</button>
+  </div>
+
+  <p style="margin-top:25px;font-size:.9rem">
+      <a href="#" id="adminLogin">Admin login</a>
+  </p>
+</div>
+
+<footer>&copy; 2025 HI TECH ONLINE CLASS. All rights reserved.</footer>
+
+<script>
+/* ---- clear previous session ---- */
+localStorage.removeItem("hiTechRegs");
+
+/* ---------- storage ---------- */
+const registrations = JSON.parse(localStorage.getItem("hiTechRegs")||"[]");
+
+/* ---------- render private list ---------- */
+function renderPrivate(){
+  const list=document.getElementById("privateList");
+  list.innerHTML="";
+  registrations.forEach(r=>{
+    const li=document.createElement("li");
+    li.textContent=`${r.name} – ${r.time}`;
+    list.appendChild(li);
+  });
+}
+
+/* ---------- gate form ---------- */
+document.getElementById("gateForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const n=document.getElementById("gName").value.trim();
+  const e1=document.getElementById("gEmail").value.trim();
+  const p=document.getElementById("gPhone").value.trim();
+  const t=new Date().toLocaleString();
+  registrations.push({name:n,email:e1,phone:p,time:t});
+  localStorage.setItem("hiTechRegs",JSON.stringify(registrations));
+
+  document.getElementById("gate").style.display="none";
+  document.getElementById("content").style.display="block";
+});
+
+/* ---------- admin auth ---------- */
+const ADMIN_PASS="hitech2025";  // change if you like
+document.getElementById("adminLogin").addEventListener("click",e=>{
+  e.preventDefault();
+  const ans=prompt("Enter admin pass-phrase:");
+  if(ans===ADMIN_PASS){
+    document.getElementById("adminArea").style.display="block";
+    renderPrivate();
+    alert("Admin area unlocked ✅");
+  }else if(ans!==null){
+    alert("Wrong password ❌");
+  }
+});
+
+/* ---------- CSV download ---------- */
+function downloadCSV(){
+  if(!registrations.length){alert("No registrations yet!");return;}
+  let csv="Name,Email,Phone,Timestamp\n";
+  registrations.forEach(r=>csv+=`${r.name},${r.email},${r.phone},${r.time}\n`);
+  const blob=new Blob([csv],{type:"text/csv"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;a.download="HI_TECH_python_registrations.csv";a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
